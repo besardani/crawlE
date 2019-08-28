@@ -1,0 +1,32 @@
+{
+  "name": "crawlcinemas",
+  "version": "1.0.0",
+  "description": "Crawl movies data from Cinemas",
+  "main": "index.js",
+  "scripts": {
+    "build-spot": "node chainCinema/com_com-spotlightcinemas.js",
+    "build-tcl": "node singleCinema/com_com-tclchinesetheatres.js",
+    "build-cinemapolis": "node singleCinema/org_org-cinemapolis.js",
+
+    "debug-spot": "node chainCinema/com_com-spotlightcinemas.js -v",
+    "debug-tcl": "node singleCinema/com_com-tclchinesetheatres.js -v",
+    "debug-cinemapolis": "node singleCinema/org_org-cinemapolis -v",
+
+    "time-spot": "node chainCinema/com_com-spotlightcinemas.js -v time:parsing",
+    "time-tcl": "node singleCinema/com_com-tclchinesetheatres.js -v time:parsing",
+    "time-cinemapolis": "node singleCinema/org_org-cinemapolis -v time:parsing",
+
+    "box-spot": "node chainCinema/com_com-spotlightcinemas.js -v :selection:box",
+    "box-tcl": "node singleCinema/com_com-tclchinesetheatres.js -v :selection:box",
+    "box-cinemapolis": "node singleCinema/org_org-cinemapolis -v :selection:box",
+
+    "cinemas-spot": "node chainCinema/com_com-spotlightcinemas.js -v cinemas",
+
+    "cinemasresult-spot": "node chainCinema/com_com-spotlightcinemas.js -v cinemas:result"
+  },
+  "author": "Besar Dani",
+  "license": "MIT",
+  "dependencies": {
+    "crawl-e/v0.4.9": "http://www.bitbucket.org/cinepass/crawl-e.git#v0.4.9"
+   }
+}
